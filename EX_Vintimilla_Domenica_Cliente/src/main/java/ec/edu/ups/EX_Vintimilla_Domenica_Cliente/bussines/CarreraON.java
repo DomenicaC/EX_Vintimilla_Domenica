@@ -1,5 +1,7 @@
 package ec.edu.ups.EX_Vintimilla_Domenica_Cliente.bussines;
 
+import java.util.List;
+
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 
@@ -35,6 +37,10 @@ public class CarreraON {
 		Universidad u = daoUni.read(codigo);
 		return u;
 		
+	}
+	
+	public List<Carrera> getCarreras(){
+		return daoCar.getCarreras();
 	}
 
 	

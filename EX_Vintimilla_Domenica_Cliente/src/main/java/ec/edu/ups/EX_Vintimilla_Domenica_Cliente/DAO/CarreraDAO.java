@@ -33,7 +33,7 @@ public class CarreraDAO {
 		em.remove(c);
 	}
 
-	public List<Carrera> getFacturas() {
+	public List<Carrera> getCarreras() {
 
 		String jpq2 = "SELECT c FROM Carrera c ";
 
