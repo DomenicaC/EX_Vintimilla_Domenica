@@ -33,7 +33,7 @@ public class UniversidadDAO {
 		em.remove(u);
 	}
 
-	public List<Universidad> getFacturas() {
+	public List<Universidad> getUnis() {
 
 		String jpq2 = "SELECT c FROM Universidad c ";
 
