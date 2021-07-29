@@ -6,6 +6,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 
 import ec.edu.ups.EX_Vintimilla_Domenica_Cliente.bussines.MiembroRegistroRemoto;
+import ec.edu.ups.EX_Vintimilla_Domenica_Cliente.modelo.Carrera;
 import ec.edu.ups.EX_Vintimilla_Domenica_Cliente.modelo.Universidad;
 
 public class Main {
@@ -37,12 +38,10 @@ public class Main {
 	}
 
 	public void registrar(String nombre, String direccion, String telefono) throws Exception {
-		Universidad u = new Universidad();
+		Carrera u = new Carrera();
 		u.setNombre(nombre);
-		u.setDireccion(direccion);
-		u.setTelefono(telefono);
 
-		registroLR.insertaUni(u);
+		registroLR.guardarCarrera(u);
 		;
 	}
 
