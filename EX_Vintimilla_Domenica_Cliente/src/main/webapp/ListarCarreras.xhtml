@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+<h1>Listado de Carreras de una institucion</h1>
+
+<h:dataTable value="#{carreraBEAN.carreras}" var="carreras"
+			class="table table-striped">
+
+
+	<h:column>
+		<f:facet name="header">Codigo Universidad</f:facet>
+			#{carreras.uni.codigo}
+		</h:column>
+
+	<h:column>
+		<f:facet name="header">Nombre Universidad</f:facet>
+			#{carreras.uni.nombre}
+		</h:column>
+
+<h:column>
+				<f:facet name="header">Codigo Carrera</f:facet>
+			#{carreras.codigo}
+			</h:column>
+
+	<h:column>
+				<f:facet name="header">Nombre Carrera</f:facet>
+			#{carreras.nombre}
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">Director de carrera</f:facet>
+			#{carreras.dirCarrera}
+		</h:column>
+
+			
+		</h:dataTable>
+
+
+</html>

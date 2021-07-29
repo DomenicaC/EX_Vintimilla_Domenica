@@ -1,6 +1,7 @@
 package ec.edu.ups.EX_Vintimilla_Domenica_Cliente.view;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.faces.view.ViewScoped;
@@ -16,12 +17,15 @@ import ec.edu.ups.EX_Vintimilla_Domenica_Cliente.modelo.Universidad;
 public class CarreraBEAN implements Serializable {
 
 	private Carrera newCarrera = new Carrera();
+	
+	private List<Carrera> carreras;
 
 	@Inject
 	private CarreraON onCarrera;
 
 	@PostConstruct
 	private void init() {
+		carreras = onCarrera.getCarreras();
 
 	}
 
@@ -31,6 +35,14 @@ public class CarreraBEAN implements Serializable {
 
 	public void setNewCarrera(Carrera newCarrera) {
 		this.newCarrera = newCarrera;
+	}
+
+	public List<Carrera> getCarreras() {
+		return carreras;
+	}
+
+	public void setCarreras(List<Carrera> carreras) {
+		this.carreras = carreras;
 	}
 
 	public String doLoadUnis() {
@@ -48,4 +60,6 @@ public class CarreraBEAN implements Serializable {
 		return null;
 	}
 
+	
+	
 }

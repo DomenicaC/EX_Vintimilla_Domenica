@@ -17,7 +17,7 @@ public class carrServices {
 	@Inject
 	private CarreraON onCarrera;
 	
-	@WebMethod
+	/*@WebMethod
 	public List<carreraTemp> getCarreras(){
 		List<Carrera> list = onCarrera.getCarreras();
 		List<carreraTemp> carreras = new ArrayList<carreraTemp>();
@@ -30,6 +30,6 @@ public class carrServices {
 		}
 		
 		return carreras;
-	}
+	}*/
 
 }
