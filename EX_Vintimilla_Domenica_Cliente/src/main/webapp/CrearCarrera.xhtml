@@ -8,17 +8,24 @@
 
 <h:form>
 
-	<label>Nombre Carrera</label>
-	<h:inputText value="#{carreraBEAN.newCarrera.nombre}" />
+	<label for="txtNombreCra">Nombre Carrera</label>
+	<h:inputText value="#{carreraBEAN.newCarrera.nombre}" id="txtNombreCra" /> <br/>
 	
-	<label>Director de Carrera</label>
-	<h:inputText value="#{carreraBEAN.newCarrera.dirCarrera}" />
+	<label for="txtDir">Director de Carrera</label>
+	<h:inputText value="#{carreraBEAN.newCarrera.dirCarrera}" id="txtDir"/><br/>
 	
-	<label>Codigo universidad</label>
-	<h:inputText value="#{carreraBEAN.newCarrera.uni.codigo}" />
+	<label for="CodUni">Codigo universidad</label>
+	<h:inputText value="#{carreraBEAN.newCarrera.uni.codigo}" id="CodUni">
+	<f:ajax  execute="@this" listener="#{carreraBEAN.doLoadUnis()}"
+								render="txtNomUni" event="blur"/>
+	</h:inputText>
 	
-	<label>Nombre universidad</label>
-	<h:inputText value="#{carreraBEAN.newCarrera.uni.nombre}" />
+	<br/>
+	
+	<label for="txtNomUni">Nombre universidad</label>
+	<h:inputText value="#{carreraBEAN.newCarrera.uni.nombre}" id="txtNomUni"/><br/>
+	
+	<h:commandButton action="#{carreraBEAN.guargarCarrera()}" value="Guardar" />
 
 </h:form>
 
