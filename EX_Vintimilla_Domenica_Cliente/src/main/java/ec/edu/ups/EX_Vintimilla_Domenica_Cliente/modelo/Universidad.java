@@ -20,7 +20,6 @@ public class Universidad {
 	private String telefono;
 
 	@OneToMany(fetch = FetchType.EAGER)
-	@JoinColumn(name = "Car_codigo")
 	private List<Carrera> carreras;
 
 	public int getCodigo() {
