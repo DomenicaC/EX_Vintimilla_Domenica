@@ -8,6 +8,6 @@ import ec.edu.ups.EX_Vintimilla_Domenica_Cliente.modelo.Universidad;
 @Remote
 public interface MiembroRegistroRemoto {
 
-	public void insertarCliente(Universidad universidad);
+	public void insertaUni(Universidad universidad);
 	
 }
