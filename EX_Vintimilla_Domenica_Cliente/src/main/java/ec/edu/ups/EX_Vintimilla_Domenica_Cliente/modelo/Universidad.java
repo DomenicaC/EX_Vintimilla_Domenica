@@ -3,6 +3,7 @@ package ec.edu.ups.EX_Vintimilla_Domenica_Cliente.modelo;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -18,7 +19,7 @@ public class Universidad {
 	private String direccion;
 	private String telefono;
 
-	@OneToMany
+	@OneToMany(fetch = FetchType.EAGER)
 	@JoinColumn(name = "Car_codigo")
 	private List<Carrera> carreras;
 
