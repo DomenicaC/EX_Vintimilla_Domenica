@@ -43,5 +43,17 @@ public class CarreraDAO {
 		return unis;
 
 	}
-	
+
+	public List<Carrera> getCarrs(int codigo) {
+
+		String jpq2 = "SELECT c FROM Carrera c WHERE uni = codigo";
+
+		Query query = em.createQuery(jpq2, Carrera.class);
+		//query.setParameter(1, codigo);
+
+		List<Carrera> cars = query.getResultList();
+		return cars;
+
+	}
+
 }

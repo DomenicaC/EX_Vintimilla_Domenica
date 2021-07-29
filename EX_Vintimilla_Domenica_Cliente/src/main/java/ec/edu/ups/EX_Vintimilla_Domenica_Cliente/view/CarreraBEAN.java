@@ -9,6 +9,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import ec.edu.ups.EX_Vintimilla_Domenica_Cliente.bussines.CarreraON;
+import ec.edu.ups.EX_Vintimilla_Domenica_Cliente.bussines.MiembroRegistroLocal;
 import ec.edu.ups.EX_Vintimilla_Domenica_Cliente.modelo.Carrera;
 import ec.edu.ups.EX_Vintimilla_Domenica_Cliente.modelo.Universidad;
 
@@ -21,7 +22,7 @@ public class CarreraBEAN implements Serializable {
 	private List<Carrera> carreras;
 
 	@Inject
-	private CarreraON onCarrera;
+	private MiembroRegistroLocal onCarrera;
 
 	@PostConstruct
 	private void init() {

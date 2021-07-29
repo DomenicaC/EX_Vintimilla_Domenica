@@ -11,7 +11,7 @@ import ec.edu.ups.EX_Vintimilla_Domenica_Cliente.modelo.Carrera;
 import ec.edu.ups.EX_Vintimilla_Domenica_Cliente.modelo.Universidad;
 
 @Stateless
-public class CarreraON {
+public class CarreraON implements MiembroRegistroLocal, MiembroRegistroRemoto{
 
 	@Inject
 	private CarreraDAO daoCar;
@@ -42,6 +42,9 @@ public class CarreraON {
 	public List<Carrera> getCarreras(){
 		return daoCar.getCarreras();
 	}
-
 	
+	public List<Carrera> getCars(int codigo){
+		return daoCar.getCarrs(codigo);
+	}
+
 }
